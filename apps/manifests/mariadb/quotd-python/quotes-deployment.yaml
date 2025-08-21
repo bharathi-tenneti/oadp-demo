@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: quotes
+  namespace: mariadb
+  labels:
+    app: quotes
+    sandbox: learn-kubernetes
+    learn-kubernetes: quotes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quotes
+  template:
+    metadata:
+      labels:
+        app: quotes
+    spec:
+      containers:
+        - name: quotes
+          image: quay.io/rhdevelopers/quotes:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 10000
+              protocol: TCP

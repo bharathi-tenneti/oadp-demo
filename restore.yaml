@@ -1,0 +1,10 @@
+apiVersion: velero.io/v1
+kind: Restore
+metadata:
+  name: test-restore 
+  namespace: openshift-adp
+spec:
+  backupName: test-backup 
+  restorePVs: true
+  namespaceMapping:
+    mariadb: test-restore-application 
