@@ -12,18 +12,18 @@ Use OADP to take backups using ODF Nooba Storage class.
 ## MariaDB Application setup 
 Find the turorial here to setup full stack application [here](https://developers.redhat.com/learning/learn:openshift:learn-kubernetes-using-developer-sandbox/resource/resources:set-your-activity-environment)
 
-## Create mariadb application stack, including the front end and backend apps.
+## Create mariadb application stack, including the front end and backend apps. Go ahead and populate database, you can use scripts for examples, or create your own data.
 ```
 oc new-project mariadb
 oc create -f apps/manifests/mariadb/quotd-python
 oc create -f apps/manifests/mariadb/quotessql
-oc create -f apps/manifests/mariadb/quoesweb
+oc create -f apps/manifests/mariadb/quotesweb
 ```
 
 Git repos for the source code
-https://github.com/bharathi-tenneti/quotesweb.git
-https://github.com/bharathi-tenneti/quotemysql.git
-https://github.com/bharathi-tenneti/qotd-python.git
+[Frontend nodeJS](https://github.com/bharathi-tenneti/quotesweb.git)
+[mariadb with SQLs](https://github.com/bharathi-tenneti/quotemysql.git)
+[backend python](https://github.com/bharathi-tenneti/qotd-python.git)
 
 # Create ObjectBucketClaim, and backup yamls. This should create an objectBucket in ODF storage, DataProtectionApplication Instance, and a backup instance created to backup "mariadb"  namespace.
 
