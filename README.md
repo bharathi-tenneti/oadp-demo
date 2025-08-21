@@ -1,18 +1,18 @@
 # oadp-odf-demo
 How to take backup and restore using OADP operator in Redhat Openshift , using Openshift Data Foundations(ODF) as storage backend.
 
-## Pre-Reqs
+# Pre-Reqs
 1. Red Hat Openshift cluster.
 2. ODF , OADP operators installed.
 
-## Usecase
+# Usecase
 Deploy a full stack maria db application with a nodejs front end, and a python backend servcie talking with MariaDB.
 Use OADP to take backups using ODF Nooba Storage class.
 
-## MariaDB Application setup 
+# MariaDB Application setup 
 Find the turorial here to setup full stack application [here](https://developers.redhat.com/learning/learn:openshift:learn-kubernetes-using-developer-sandbox/resource/resources:set-your-activity-environment)
 
-## Create mariadb application stack, including the front end and backend apps. Go ahead and populate database, you can use scripts for examples, or create your own data.
+# Create mariadb application stack, including the front end and backend apps. Go ahead and populate database, you can use scripts for examples, or create your own data.
 ```
 oc new-project mariadb
 oc create -f apps/manifests/mariadb/quotd-python
