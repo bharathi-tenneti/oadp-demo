@@ -21,13 +21,9 @@ oc create -f apps/manifests/mariadb/quotesweb
 ```
 
 Git repos for the source code
-[Frontend nodeJS](https://github.com/bharathi-tenneti/quotesweb.git)
-[mariadb with SQLs](https://github.com/bharathi-tenneti/quotemysql.git)
-[backend python](https://github.com/bharathi-tenneti/qotd-python.git)
+https://github.com/bharathi-tenneti/mariadb-openshift-demo.git
 
 # Create ObjectBucketClaim, and backup yamls. This should create an objectBucket in ODF storage, DataProtectionApplication Instance, and a backup instance created to backup "mariadb"  namespace.
-
-
 ```
 oc create -f obc.yaml
 oc create -f dpa.yaml
